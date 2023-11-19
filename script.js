@@ -2,19 +2,24 @@ let input = document.querySelector("#task-input");
 
 input.addEventListener("keypress", function(event) {
 
-    if (event.key === "Enter") {
-
-        let newTask = document.createElement("li");
-        newTask.innerHTML = '<input type="checkbox" class="checkbox" onchange="taskChecked(event)"/>' + input.value;
-        newTask.draggable = "true";
-        newTask.ondragstart="drag(event)";
-
-
-        let taskList = document.querySelector("#task-list");
-        taskList.appendChild(newTask);
-
-        input.value = "";
+    if (event.key != "Enter") {
+        return;
     }
+    if (input.value == ''){
+        return;
+    }
+
+    let newTask = document.createElement("li");
+    newTask.innerHTML = '<input type="checkbox" class="checkbox" onchange="taskChecked(event)"/>' + input.value;
+    newTask.draggable = "true";
+    newTask.ondragstart="drag(event)";
+
+
+    let taskList = document.querySelector("#task-list");
+    taskList.appendChild(newTask);
+
+    input.value = "";
+    
 });
 
 function taskChecked(event) {
