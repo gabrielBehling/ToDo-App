@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+li {
+    cursor: move;
+}
+.checkbox {
+    cursor: pointer;
+}
+
+#todo-container {
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+#task-input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.checked {
+    text-decoration: line-through;
+}
