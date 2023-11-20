@@ -8,6 +8,7 @@ li {
     cursor: move;
     color: rgb( 232,234,237 );
     font-size: 20px;
+    overflow-wrap: break-word;
 }
 .checkbox {
     cursor: pointer;
@@ -44,7 +45,8 @@ li {
 }
 
 .checked {
-    text-decoration: line-through;
+    text-decoration: line-through #bbb;
+    color: rgb(120, 120, 120)
 }
 h2{
     font-size: 40px;
